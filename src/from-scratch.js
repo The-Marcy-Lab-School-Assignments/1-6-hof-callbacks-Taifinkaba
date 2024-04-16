@@ -21,7 +21,14 @@ const myFind = (arr, callBk) => {
   return undefined;
 };
 
-const myFilter = () => {
+const myFilter = (arr, callBk) => {
+  const newArr = [];
+  for(let i = 0; i < arr.length; i++){
+    if(callBk(arr[i])){
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr;
 };
 
 const sortWords = () => {
