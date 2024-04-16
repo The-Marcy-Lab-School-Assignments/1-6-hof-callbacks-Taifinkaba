@@ -12,7 +12,13 @@ const myMap = (arr, callBk) => {
   return newArr;
 };
 
-const myFind = () => {
+const myFind = (arr, callBk) => {
+  for(let i = 0; i < arr.length; i++){
+    if(callBk(arr[i])){
+      return arr[i];
+    }
+  }
+  return undefined;
 };
 
 const myFilter = () => {
