@@ -31,13 +31,23 @@ const myFilter = (arr, callBk) => {
   return newArr;
 };
 
-const sortWords = () => {
+const sortWords = (arr) => {
+  const newArr= arr.slice();
+  return newArr.sort();
 };
 
-const sortNumbers = () => {
+const sortNumbers = (arr) => {
+  const newArr= arr.slice();
+  return newArr.sort((a,b) => a - b);
 };
 
-const sortNumbersBetter = () => {
+const sortNumbersBetter = (arr, descend = false) => {
+  const newArr= arr.slice();
+  if (descend) {
+    return newArr.sort((a, b) => b - a);
+  } else {
+    return newArr.sort((a, b) => a - b); 
+  }
 };
 
 const sortUsersByOrder = () => {
