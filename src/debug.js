@@ -10,7 +10,7 @@ const sortUsersBy = (users, sortingFunction) => {
 };
 
 const logEachName = (names) => {
-  names.forEach(name => console.log(name));
+  names.forEach((element, index, array) => console.log(element, index, array));
 };
 
 const logEachUserBio = (users) => {
